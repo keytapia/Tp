@@ -102,7 +102,7 @@ buscar_padron() {
 
 	if [ -f "$ARCHIVO" ]; then
     		read -p "Ingrese padrón: " padron
-    		grep "^$padron" "$ARCHIVO"
+    		grep -d "^$padron" "$ARCHIVO"
   	else
     		echo "El archivo no existe."
   	fi
